@@ -1,0 +1,75 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+  height: 59px;
+  background-color: #2C3782;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  .logo {
+    //width: 118px;
+    //height: 26px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    span {
+      color: white;
+      font-size: 14px;
+    }
+  }
+  .user {
+    font-weight: 700;
+    height: 51px;
+    span {
+      font-size: 14px;
+    }
+    color: #FFFFFF;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+}
+
+.setting {
+  max-width: 243px;
+  max-height: 252px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.inner {
+  box-shadow: none;
+  font-weight: 700;
+  span {
+    font-size: 14px;
+  }
+  button {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    padding: 0;
+    color: #2C3782;
+    &:hover {
+      color: #6576FF !important;
+    }
+  }
+  .divider {
+    margin: 8px auto;
+    border-width: 2px 0 0;
+  }
+  p {
+    font-weight: 500;
+    font-size: 14px;
+    color: #6576FF;
+  }
+  :global(.ant-btn >span) {
+    //margin-inline-start: 8px;
+  }
+}

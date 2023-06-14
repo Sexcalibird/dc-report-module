@@ -1,0 +1,27 @@
+@import "./vars.scss";
+
+.txt-ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.style-scroll-bar {
+  /* width */
+  &::-webkit-scrollbar {
+    width: 6px !important;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: rgb(186, 192, 198);
+    border-radius: 10px;
+  }
+}
+
+.hidden-form-error {
+  :global(.ant-form-item-explain-error) {
+    display: none !important;
+  }
+}

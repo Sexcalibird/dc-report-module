@@ -1,0 +1,155 @@
+@import "../../../../assets/style/mixins.less";
+
+.container {
+  height: calc(100vh - @header-height - 2px);
+  overflow: auto;
+  background-color: #fff;
+  position: sticky;
+  top: @header-height;
+  border-right: 1px solid #e0e0e0;
+  .sider-wrapper {
+    padding: 15px;
+    border-bottom: 1px dashed #e0e0e0;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+.row-sider {
+  position: relative;
+  padding: 6px 12px;
+
+  &.search {
+  }
+  .input {
+    margin-top: 16px;
+    height: 36px;
+    padding-left: 26px;
+  }
+  .search-icon {
+    position: absolute;
+    top: 51%;
+    left: 22px;
+
+    transform: scale(1.4);
+  }
+}
+.sider-dash {
+  margin: 8px 0;
+}
+.pop-up-time {
+  :global(.ant-popover-inner) {
+    border-radius: 12px;
+  }
+}
+.title {
+  padding: 16px 0;
+  font-size: larger;
+  text-transform: uppercase;
+  color: #cecece !important;
+}
+.pop-item {
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 600 !important;
+  cursor: pointer;
+  color: @navy1;
+  &:hover {
+    background-color: @main-color;
+    color: #fff;
+    &:nth-last-child(1) {
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+    }
+  }
+}
+.today-btn {
+  width: 100%;
+  height: 36px;
+}
+
+.sider-line {
+  margin: 4px 0;
+}
+.mr-center {
+  margin: auto;
+}
+.sider-btn--group {
+  margin-top: 16px;
+  .sider-btn {
+    width: 98px;
+    font-size: 13px;
+  }
+}
+
+.sider-title {
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 700 !important;
+}
+.pop-up-time {
+  background-color: #fff;
+  border-radius: 30px;
+
+  :global(.ant-popover-content) {
+    padding: 0;
+  }
+  :global(.ant-popover-arrow) {
+    display: none;
+  }
+  :global(.ant-popover-inner-content) {
+    padding: 0;
+  }
+}
+.date-pick {
+  width: 100%;
+  height: 36px;
+  input {
+    font-size: 13px !important;
+  }
+}
+
+.select-custom {
+  z-index: 0;
+  padding: 2px 0 0 0 !important;
+
+  :global(.ant-select-item-option-content) {
+    color: @navy1;
+  }
+
+  :global(.ant-select-item-option-selected) * {
+    color: #fff;
+  }
+
+  :global(.ant-select-tree-switcher) {
+    width: 10px;
+  }
+
+  :global(.ant-select-tree-title) {
+    color: @navy1;
+  }
+
+  :global(.ant-select-item-option-disabled) {
+    background-color: #00000010;
+
+    * {
+      color: #00000050;
+    }
+  }
+  :global(.ant-select-selection-item) {
+    color: @navy1;
+  }
+}
+
+.treeSelect {
+  :global(.ant-select-tree-list) {
+    padding: 0 6px;
+  }
+
+  :global(.ant-select-tree-switcher) {
+    display: none;
+  }
+  :global(.ant-select-tree-indent) {
+    display: none !important;
+  }
+}

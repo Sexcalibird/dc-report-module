@@ -1,0 +1,81 @@
+@import "../../assets/style/mixins.scss";
+
+.ok-btn {
+  svg {
+    color: #fff;
+  }
+}
+
+.title-content {
+  margin-top: 15px;
+  padding: 0 15px;
+
+  p {
+    color: $navy1;
+    white-space: pre-line; // break words after "\n"
+  }
+}
+
+.modal-pdf {
+  :global(.ant-modal-body) {
+    padding: 0 !important;
+  }
+}
+
+.pdf {
+  max-height: calc(100vh - 110px);
+  overflow: auto;
+  // display: flex;
+  // flex-wrap: wrap;
+
+  .document {
+    border: 1px solid #00000025;
+    border-width: 0 0px 1px 0;
+    box-sizing: border-box;
+
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
+.red-txt h1 {
+  color: #ff5855 !important;
+}
+
+.red-btns button {
+  border-color: #ff5855 !important;
+  color: #ff5855 !important;
+  padding: 0 15px !important;
+
+  &.ok-btn {
+    color: #fff !important;
+    background-color: #ff5855 !important;
+    padding: 0 15px !important;
+  }
+}
+
+:global(.print-src) {
+  display: none;
+}
+
+@media print {
+  :global(.print-src) {
+    display: block;
+  }
+}
+#dm-nguyen {
+  background-color: aquamarine;
+  border: 2px solid red;
+}
+
+.datePicker {
+  border: none;
+  background-color: #f5f7fb !important;
+  height: 32px;
+}
+
+// :global(.ant-modal-wrap),
+// :global(.ant-modal-mask) {
+//   z-index: 1052;
+// }

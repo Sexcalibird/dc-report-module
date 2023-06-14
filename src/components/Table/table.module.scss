@@ -1,0 +1,136 @@
+@import "../../assets/style/mixins.scss";
+
+.styleTable {
+
+  :global(.ant-table) {
+    border-radius: 10px;
+  }
+
+  table {
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+  }
+
+  :global(.ant-table-header) {
+    border-radius: 10px;
+    &:after {
+      content: "@";
+      width: 100%;
+      background: #F5F7FB;
+      display: block;
+      text-indent: -99999px;
+      line-height: 12px;
+    }
+  }
+
+  :global(.ant-table-body) {
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+  }
+
+  :global(.ant-table-title),
+  :global(.ant-table-footer) {
+    padding-inline: 20px !important;
+  }
+  :global(.ant-table-footer) {
+    background: #fff;
+  }
+  :global(.ant-table-thead) {
+    :global(.ant-table-cell) {
+      color: $navy1;
+      background-color: white;
+    }
+  }
+  :global(.ant-table-tbody > tr > td) {
+    // border-bottom: 1px solid #f1f1f1 !important;
+    // border-right: 1px solid #f1f1f1 !important;
+  }
+  :global(.ant-table-tbody > tr.ant-table-row-selected > td) {
+    background-color: transparent !important;
+    color: $navy1;
+  }
+  :global(.ant-table-body),
+  :global(.ant-table-content) {
+    :global(.ant-table-cell) {
+      cursor: pointer;
+    }
+    &::-webkit-scrollbar {
+      width: 6px !important;
+      height: 6px !important;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #d9d9d9;
+      border-radius: 10px;
+    }
+  }
+  tr {
+    th:first-of-type {
+      // paddingLeft: `${sizes.gap}px !important`,
+    }
+  }
+  :global(.ant-pagination-options) {
+    position: absolute;
+    left: 0;
+    margin-left: 0 !important;
+    display: flex;
+    align-items: center;
+    &:before {
+      content: "Hiển thị";
+      color: #999;
+      margin-right: 8px;
+      font-size: 12px;
+    }
+    &:after {
+      content: "mỗi trang";
+      margin-left: 8px;
+      color: #999;
+      font-size: 12px;
+    }
+    :global(.ant-select-selector) {
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    }
+  }
+  :global(.ant-pagination) {
+    margin: 0 !important;
+    margin-block: 0;
+    padding: 15px 0;
+    background-color: transparent;
+    border-radius: 0 0 5px 5px;
+    border-top: 1px solid #eaeaea;
+    * {
+      font-size: 12px;
+    }
+    :global(.ant-pagination-item) {
+      a {
+        color: $navy1;
+      }
+    }
+    :global(.ant-pagination-item-active) {
+      background-color: $main-color;
+      transition: all 0s;
+      border-radius: 100%;
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.navigateBtn {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  :global(.label) {
+    font-size: 12px;
+    color: #999999;
+  }
+  svg {
+    font-size: 10px;
+  }
+}
+
+.stylePaginationCenter {
+  :global(.ant-pagination) {
+    justify-content: center;
+  }
+}

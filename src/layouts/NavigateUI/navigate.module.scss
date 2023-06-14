@@ -1,0 +1,29 @@
+.menu-container {
+  width: calc(100vw - 300px);
+  background-color: #2c3782;
+  :global(.ant-menu) {
+    height: 60px;
+    background-color: #2c3782;
+    color: #7681BF;
+    justify-content: center;
+  }
+  :global(.ant-menu-light.ant-menu-horizontal >.ant-menu-item) {
+    display: flex;
+    top: 0;
+  }
+  :global(.ant-menu-light.ant-menu-horizontal >.ant-menu-item-selected) {
+    color: white;
+  }
+  :global(.ant-menu-light.ant-menu-horizontal >.ant-menu-item-selected::after),
+  :global(.ant-menu-light.ant-menu-horizontal >.ant-menu-item:hover::after),
+  :global(.ant-menu-light.ant-menu-horizontal >.ant-menu-item::after) {
+    border-bottom: none;
+    color: #2C3782;
+  }
+  :global(.ant-menu-light.ant-menu-horizontal >.ant-menu-item:hover) {
+    color: white;
+  }
+  :global(.ant-menu-light.ant-menu-horizontal >.ant-menu-item-selected:hover) {
+    color: white;
+  }
+}
